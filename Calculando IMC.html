@@ -14,12 +14,33 @@
 
         document.write(frase);
         pulaLinha();
+    }
+   
+    function calculaImc(altura, peso) {
+
+    return peso / (altura * altura);
 }
   var nome = prompt ("Informe seu nome");
   var alturaInformada = prompt("Informe sua altura");
   var pesoInformado = prompt("Informe seu peso");
 
-    var MeuIMC = pesoInformado / (alturaInformada * alturaInformada);
+  var MeuIMC = calculaImc(alturaInformada, pesoInformado);
 
-    mostra(nome + "o seu  IMC é " + MeuIMC);
-</script>
+
+    mostra(nome + " o seu  IMC é " + MeuIMC);
+   
+    if(MeuIMC<18.5){
+        
+    mostra("Você está abaixo do recomendado");
+    }
+
+    if(MeuIMC>35){
+    mostra("Você está acima do recomendado");
+}
+    
+    if(MeuIMC >= 18.5 && MeuIMC <= 35) {
+
+    mostra("Seu IMC está excelente!");
+    }
+
+ </script>
